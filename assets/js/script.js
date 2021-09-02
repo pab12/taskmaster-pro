@@ -268,6 +268,7 @@ var auditTask = function(taskEl) {
   // convert to moment object at 5:00pm
   var time = moment(date, "L").set("hour", 17);
 
+  $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
   // apply new class if task is near/over due date
   if (moment().isAfter(time)) {
     $(taskEl).addClass("list-group-item-danger");
